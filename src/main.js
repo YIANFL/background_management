@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+// 导入插件
+import ZkTable from 'vue-table-with-tree-grid'
 // 导入全局样式表
 import '@/assets/css/global.css'
 // 引入element-ui按需引入的组件
@@ -11,6 +13,9 @@ import '@/assets/fonts/iconfont.css'
 
 // 配置axios,导入axios,并将其挂载到vue的原型对象上面
 import axios from 'axios'
+
+// 注册插件
+Vue.component('tree-table', ZkTable)
 axios.interceptors.request.use(config => {
   // console.log(config)
   config.headers.Authorization = window.sessionStorage.getItem('TOKEN')
