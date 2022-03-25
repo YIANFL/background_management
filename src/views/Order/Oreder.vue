@@ -100,7 +100,7 @@
           :key="index"
           :timestamp="activity.time"
         >
-          {{ activity.context }}
+          {{ activity.context}}
         </el-timeline-item>
       </el-timeline>
     </el-dialog>
